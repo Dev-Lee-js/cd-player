@@ -38,11 +38,12 @@ window.onload = function(){
     
     prev_button.addEventListener("click", function(){   
 
-        play_button.className = "fas fa-play"
-        play_sw = 0
+        play_button.className = "fas fa-pause"
+        play_sw = 1
 
         for(i = 0; i <= 2; i ++){
             audio[i].pause()
+            audio[i].currentTime = 0;
             
         }
 
@@ -52,7 +53,27 @@ window.onload = function(){
         }else{
             pageNum = totalNum -1;
         }
-
+        if(pageNum==0){
+            audio[0].play();
+            audio[1].pause();
+            audio[1].currentTime = 0;
+            audio[2].pause();
+            audio[2].currentTime = 0;
+        }
+        else if(pageNum==1){
+            audio[1].play()
+            audio[0].pause()
+            audio[0].currentTime = 0;
+            audio[2].pause()
+            audio[2].currentTime = 0;
+        }
+        else{
+            audio[2].play()
+            audio[1].pause()
+            audio[1].currentTime = 0;
+            audio[0].pause()
+            audio[0].currentTime = 0;
+        }
         
          
         pageChangeFunc();
@@ -63,18 +84,39 @@ window.onload = function(){
 
     next_button.addEventListener("click", function(){
 
-        play_button.className = "fas fa-play"
-        play_sw = 0
+        play_button.className = "fas fa-pause"
+        play_sw = 1
         
-        for(i = 0; i <= 2; i ++){
-            audio[i].pause()
-            play_button.className = "fas fa-play"
-        }
+       
         if(pageNum < totalNum-1){
             pageNum ++;
         }else{
             pageNum = 0;
         }
+
+        if(pageNum==0){
+            audio[0].play();
+            audio[1].pause();
+            audio[1].currentTime = 0;
+            audio[2].pause();
+            audio[2].currentTime = 0;
+        }
+        else if(pageNum==1){
+            audio[1].play()
+            audio[0].pause()
+            audio[0].currentTime = 0;
+            audio[2].pause()
+            audio[2].currentTime = 0;
+        }
+        else{
+            audio[2].play()
+            audio[1].pause()
+            audio[1].currentTime = 0;
+            audio[0].pause()
+            audio[0].currentTime = 0;
+        }
+
+
         pageChangeFunc();
     })
 
