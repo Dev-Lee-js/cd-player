@@ -13,6 +13,7 @@ bgArray[0] = ["#0272a4","#f6a564"];
 bgArray[1] = ["#b6bfc8","#36595b"];
 bgArray[2] = ["#e58e82","#6f569f"];
 
+
 window.onload = function(){
     currentPlayTime = document.querySelector('.play__time p:first-child');
     totalPlayTime = document.querySelector('.play__time p:last-child');
