@@ -13,11 +13,11 @@ body {
 
 .contentWrap .album {
   position: absolute;
-  top: 47%;
+  top: 40%;
   left: 55%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 405px;
+  width: 458px;
+  height: 302px;
   visibility: hidden;
   opacity: 0;
   transition: all .4s ease-in-out;
@@ -38,7 +38,7 @@ body {
 }
 
 .contentWrap .album.active .disk {
-  left: 180px;
+  left: 145px;
   transition-delay: .5s;
 }
 
@@ -54,8 +54,8 @@ body {
 
 .contentWrap .album .coverImg {
   position: absolute;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   box-shadow: 2px 14px 40px rgba(0, 0, 0, 0.3);
 }
 
@@ -75,8 +75,8 @@ body {
   position: absolute;
   top: 4px;
   left: 0px;
-  width: 340px;
-  height: 340px;
+  width: 300px;
+  height: 296px;
   border-radius: 50%;
   background: linear-gradient(120deg, #000, #333333, #000);
   box-shadow: 4px 14px 40px rgba(0, 0, 0, 0.3);
@@ -129,7 +129,7 @@ body {
 
 .buttonWrap {
   position: fixed;
-  bottom: 5vh;
+  bottom: 12vh;
   text-align: center;
   width: 100%;
 }
