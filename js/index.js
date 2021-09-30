@@ -82,6 +82,7 @@ window.onload = function(){
         
         if(play_sw == 0){
             audio[pageNum].play()
+            audio[pageNum].loop = true;
             play_button.className = "fas fa-pause"
             play_sw = 1
 

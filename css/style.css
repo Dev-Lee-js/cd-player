@@ -34,19 +34,26 @@
     height: 8px;
     -webkit-appearance: none;
     background: rgba(0, 0, 0, .07);
-    outline: none;
-    overflow: hidden;
+    outline: none;    
 }
+.play__range input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    cursor: pointer;
+  }
 .play__time p {
     position: absolute;
-    font-size: var(--font-small);
+    font-size: 12px;
     color: var(--grey);
 }
 .play__time p:first-child {
-    top: -12px;
+    top: -40px;
     left: 10px;
 }
 .play__time p:last-child {
-    top: -12px;
+    top: -40px;
     right: 10px;
 }
