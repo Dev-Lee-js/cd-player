@@ -17,7 +17,7 @@ body {
   left: 55%;
   transform: translate(-50%, -50%);
   width: 600px;
-  height: 400px;
+  height: 405px;
   visibility: hidden;
   opacity: 0;
   transition: all .4s ease-in-out;
@@ -54,8 +54,8 @@ body {
 
 .contentWrap .album .coverImg {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   box-shadow: 2px 14px 40px rgba(0, 0, 0, 0.3);
 }
 
@@ -75,8 +75,8 @@ body {
   position: absolute;
   top: 4px;
   left: 0px;
-  width: 392px;
-  height: 392px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   background: linear-gradient(120deg, #000, #333333, #000);
   box-shadow: 4px 14px 40px rgba(0, 0, 0, 0.3);

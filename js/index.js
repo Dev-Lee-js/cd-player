@@ -8,11 +8,15 @@ var pointBtnAll;
 var bgArray = new Array();
 var audio = []
 var play_sw = 0;
+
 bgArray[0] = ["#0272a4","#f6a564"];
 bgArray[1] = ["#b6bfc8","#36595b"];
 bgArray[2] = ["#e58e82","#6f569f"];
 
 window.onload = function(){
+    currentPlayTime = document.querySelector('.play__time p:first-child');
+    totalPlayTime = document.querySelector('.play__time p:last-child');
+    timeRange = document.querySelector("input");
     prev_button = document.querySelectorAll("i")[0];
     next_button = document.querySelectorAll("i")[2];
     play_button = document.querySelectorAll("i")[1];
@@ -28,6 +32,10 @@ window.onload = function(){
         audio[i].volume = 0.3;
     }
 
+    timeRange.addEventListener("input", function(e){
+        audio[pageNum].currentTime = e.target.value;
+    });
+    
     prev_button.addEventListener("click", function(){   
 
         play_button.className = "fas fa-play"
@@ -169,7 +177,22 @@ function pageChangeFunc(){
 
     console.log(pageNum)
 
-
+    setInterval(function () {
+        const currentTime = parseInt(audio[pageNum].currentTime);
+        const duration = parseInt(audio[pageNum].duration);
+        timeRange.max = duration;
+        timeRange.value = currentTime;
+        const currentTimes = {
+            min: (parseInt(currentTime / 60)),
+            sec: (currentTime % 60)
+        }
+        const durations = {
+            min: (parseInt(duration / 60)),
+            sec: (duration % 60)
+        }
+        currentPlayTime.innerText = `${currentTimes.min}:${currentTimes.sec}`;
+        totalPlayTime.innerText = `${durations.min}:${durations.sec}`;  
+    }, 500);
     contentWrap.style.background = "linear-gradient(120deg,"+ bgArray[pageNum][0] +", "+ bgArray[pageNum][1] + ")";
 
     for(var i=0; i<totalNum; i++){

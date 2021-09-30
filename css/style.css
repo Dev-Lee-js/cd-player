@@ -20,3 +20,33 @@
 .fa-pause{
     color: white;
 }
+.play__range {
+    position: absolute;
+    margin: 40px 0px;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    bottom: 55px;
+    transform: translate(-50%, -50%);
+}
+.play__range input[type=range] {
+    width: 220px;
+    height: 8px;
+    -webkit-appearance: none;
+    background: rgba(0, 0, 0, .07);
+    outline: none;
+    overflow: hidden;
+}
+.play__time p {
+    position: absolute;
+    font-size: var(--font-small);
+    color: var(--grey);
+}
+.play__time p:first-child {
+    top: -12px;
+    left: 10px;
+}
+.play__time p:last-child {
+    top: -12px;
+    right: 10px;
+}
