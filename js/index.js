@@ -14,6 +14,7 @@ bgArray[1] = ["#b6bfc8","#36595b"];
 bgArray[2] = ["#e58e82","#6f569f"];
 
 
+
 window.onload = function(){
     currentPlayTime = document.querySelector('.play__time p:first-child');
     totalPlayTime = document.querySelector('.play__time p:last-child');
@@ -56,6 +57,7 @@ window.onload = function(){
         }
         if(pageNum==0){
             audio[0].play();
+            audio[0].loop = true;
             audio[1].pause();
             audio[1].currentTime = 0;
             audio[2].pause();
@@ -63,6 +65,7 @@ window.onload = function(){
         }
         else if(pageNum==1){
             audio[1].play()
+            audio[1].loop = true;
             audio[0].pause()
             audio[0].currentTime = 0;
             audio[2].pause()
@@ -70,6 +73,7 @@ window.onload = function(){
         }
         else{
             audio[2].play()
+            audio[2].loop = true;
             audio[1].pause()
             audio[1].currentTime = 0;
             audio[0].pause()
@@ -97,6 +101,7 @@ window.onload = function(){
 
         if(pageNum==0){
             audio[0].play();
+            audio[0].loop = true;
             audio[1].pause();
             audio[1].currentTime = 0;
             audio[2].pause();
@@ -104,6 +109,7 @@ window.onload = function(){
         }
         else if(pageNum==1){
             audio[1].play()
+            audio[1].loop = true;
             audio[0].pause()
             audio[0].currentTime = 0;
             audio[2].pause()
@@ -111,6 +117,7 @@ window.onload = function(){
         }
         else{
             audio[2].play()
+            audio[2].loop = true;
             audio[1].pause()
             audio[1].currentTime = 0;
             audio[0].pause()
