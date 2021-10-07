@@ -11,6 +11,7 @@
 <p align='center'>                
     <img src="https://img.shields.io/badge/css-v3.0.0-brown?logo=css3"/>   
     <img src="https://img.shields.io/badge/html-v5.0.0-red?logo=html5"/>       
+    <img src="https://img.shields.io/badge/JavaScript-ES2019-yellow?logo=JavaScript"/>      
 </p>
 
 ### 🚀 Deploy
